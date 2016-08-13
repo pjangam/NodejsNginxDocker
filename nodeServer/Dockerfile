@@ -2,7 +2,7 @@
 FROM    ubuntu
 
 # File Author / Maintainer
-MAINTAINER Pramomd Jangam
+MAINTAINER Tavisca Solutions
 
 # Install Node.js and other dependencies
 RUN apt-get update \
@@ -17,9 +17,10 @@ RUN apt-get update \
 # Install forever
 RUN npm install -g forever
 
-# Provides cached layer for node_modules
+# Add code files
+# NOTE: remove test folder
 ADD connectorpackage src
-RUN cd /src && npm install
+RUN cd /src && npm install --production
 
 # Define working directory
 WORKDIR /src

@@ -12,5 +12,7 @@ call forever stop ./bin/www
 
 :: docker
 :: docker build -t pjangam/pricelineconnector:v0 .
-:: docker build -t pjangam/pricelineconnector:v0 .
 :: docker run -d -p 3000:3000 --name pricelineconnector1 -t pjangam/pricelineconnector:v0
+::
+:: docker build -t pjangam/nginx .
+:: docker run -d --name nginx -p 80:80 -t pjangam/nginx
