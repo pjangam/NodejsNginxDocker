@@ -11,6 +11,6 @@ call forever stop ./bin/www
 
 
 :: docker
-:: git clone -v --recurse-submodules --progress --branch develop "git@github.com:pjangam/NodejsNginxDocker.git" docker
-:: docker build -t pricelineconnector:v0 .
-:: docker run --name pricelineinstance -t pricelineconnector:v0
+:: docker build -t pjangam/pricelineconnector:v0 .
+:: docker build -t pjangam/pricelineconnector:v0 .
+:: docker run -d -p 3000:3000 --name pricelineconnector1 -t pjangam/pricelineconnector:v0
