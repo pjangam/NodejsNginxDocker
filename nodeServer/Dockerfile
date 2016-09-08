@@ -7,7 +7,7 @@ MAINTAINER Tavisca Solutions
 # Install Node.js and other dependencies
 RUN apt-get update \
     && apt-get -y install curl apt-utils \
-    && curl -sL https://deb.nodesource.com/setup_4.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
     && apt-get -y install python build-essential \
     && apt-get install -y nodejs \
 
